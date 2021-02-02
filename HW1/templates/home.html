@@ -1,0 +1,32 @@
+{% extends 'base_layout.html' %}
+
+
+
+{% block body %}
+    <h1>Current Weather</h1>
+
+    <form>
+        <input type="text" name="city" placeholder="weather search">
+        <input type="submit" value="Submit">
+    </form>
+
+    <p>City: <b>{{weather.city}}, {{weather.country}}</b></p>
+    <p>description:{{weather.description}} |temp:{{weather.temperature}}&#8451</p>
+    <p>humidity:{{weather.humidity}} kPa<p> 
+    <p>speed:{{weather.speed}} m/s<p>
+    <img src="http://openweathermap.org/img/wn/{{weather.icon}}@2x.png">
+
+    {%for x in new%}
+    <p>Title: <b>{{x.title}}</b></p>
+    <p>about this:{{x.description}}</p>
+    
+    <img  src="{{x.urlToImage}}" style="width:200px;height:200px;">
+    <button> <a href= "{{x.url}}">read more</a>  </button>
+    
+
+
+    {% endfor %}
+
+
+
+{% endblock %}

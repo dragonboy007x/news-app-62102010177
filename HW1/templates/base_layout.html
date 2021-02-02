@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>My Web Application</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">    </head>
+
+        <style>
+            body {
+                
+                background-image: url("https://image.freepik.com/free-vector/blue-watercolor-splash-web-page-screen-size-background_70155-118.jpg");
+                background-repeat: no-repeat;
+                background-size: 100% 100%;  
+            }
+            </style>
+
+
+    <body>
+       
+        {% include './includes/_navbar.html' %}
+
+        <div class="container">
+            {% block body %}{% endblock %}
+        </div>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+</html>
+{% include 'includes/footer.html' %}
